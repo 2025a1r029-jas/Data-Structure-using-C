@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int num, base = 1;
+    int rem = 0, sum = 0;
+    printf("Enter the binary number: ");
+    scanf("%d", &num);
+    int temp = num;
+    while( num != 0){
+        rem = num%10;
+        sum = sum + rem*base;
+        base += base;
+        num = num/10;
+    }
+    printf("Decimal of %d is %d", temp, sum);
+    return 0;
+}
