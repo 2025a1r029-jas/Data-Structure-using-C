@@ -1,7 +1,14 @@
 #include<stdio.h>
 int main(){
-int n;
-scanf("%o", &n);
-printf("%d", n);
-return 0;
+    int Octal, base = 1, DecNum = 0;
+    printf("Enter The Value Of Octal: ");
+    scanf("%d", &Octal);
+    while(Octal != 0){
+        int rem = Octal%10;
+        DecNum = DecNum + rem*base;
+        base = base*8;
+        Octal = Octal/10;
+    }
+    printf("Decimal = %d", DecNum);
+    return 0;
 }
